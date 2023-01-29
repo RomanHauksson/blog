@@ -1,9 +1,9 @@
 ---
 title: "tools for finding information on the internet"
-date: 2023-01-28
+date: 2023-01-29
 # weight: 1
 # aliases: ["/first"]
-tags: ["practical", "epistemology"]
+tags: ["practical"]
 # author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true

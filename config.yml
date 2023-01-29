@@ -159,3 +159,6 @@ markup:
 
 # for search
 # https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/
+
+permalinks:
+  post: /:filename/
