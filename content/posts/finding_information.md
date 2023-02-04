@@ -23,6 +23,11 @@ ShowPostNavLinks: true
 ShowWordCount: false
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
+# ShowPostedElsewhere: true
+# postedElsewhere:
+#     - name: reddit
+#       url: "https://example.com"
+
 # cover:
 #     image: "<image path/url>" # image path/url
 #     alt: "<alt text>" # alt text

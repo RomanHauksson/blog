@@ -58,26 +58,29 @@ params:
 
   # profile-mode
   profileMode:
-    enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
+    enabled: true # needs to be explicitly set
+    title: "Hi, my name's Roman!"
+    subtitle: |+
+      I'm an undergraduate Computer Science student at the University of Texas at Dallas and the president of Effective Altruism UTD: a student group that aims to help students use the principles of [effective altruism](https://www.effectivealtruism.org/) to have a greater positive impact on the world using their career.
+
+      I want to work full-time solving the world's most important and neglected problems and ensure humanity has a long and flourishing future. In particular, I'm pursuing technical research into [ensuring the safety of powerful AI systems](https://80000hours.org/problem-profiles/artificial-intelligence/).
+    imageUrl: "Roman.jpg"
     imageWidth: 120
     imageHeight: 120
-    imageTitle: my image
+    imageTitle: "photo of Roman"
     buttons:
-      - name: posts
+      # - name: learn more about me
+      #   url: about
+      - name: read my posts ➙
         url: posts
-      - name: tags
-        url: tags
 
   # home-info mode
   homeInfoParams:
     Title: "Hi, my name's Roman!"
     Content: |+
-      I'm an undergraduate Computer Science student at the University of Texas at Dallas and the co-founder and president of UTD's [effective altruism](https://www.effectivealtruism.org/) student group.
+      I'm an undergraduate Computer Science student at the University of Texas at Dallas and the co-founder and president of UTD's [effective altruism](https://www.effectivealtruism.org/) student group.
 
-      I want to use my career to help solve the world's most important and neglected problems and ensure humanity has a long and flourishing future. In particular, I'm interested in pursuing technical research to [prevent the development of powerful AI systems from threatening humanity's existence](https://80000hours.org/problem-profiles/artificial-intelligence/).
+      I want to use my career to help solve the world's most important and neglected problems and ensure humanity has a long and flourishing future. In particular, I'm pursuing technical research to [prevent the development of powerful AI systems from threatening humanity's existence](https://80000hours.org/problem-profiles/artificial-intelligence/).
 
       ## more links
 
@@ -85,7 +88,7 @@ params:
       - [Course schedule](https://calendar.google.com/calendar/embed?src=2b7556e5a15bb37f1d425fe706f6fcda59d5bc118d6932c5d8369566b92d21df%40group.calendar.google.com): check to see if we're in the same class  
       - [Calendly](https://calendly.com/RomanHauksson/): book a virtual meeting with me  
       - [Focusmate](https://www.focusmate.com/user/romanhauksson): cowork with me  
-      - [Discord](https://discordapp.com/users/888545144473780254) (`RomanHauksson#3458`): chat with me  
+      - [Discord](https://discordapp.com/users/888545144473780254) (`RomanHauksson#3458`): chat with me  
       - [Goodreads](https://www.goodreads.com/RomanHauksson): what I'm reading  
       - [Pocket](https://getpocket.com/@RomanHauksson): the articles and videos I like  
       - [UT Dallas website](https://personal.utdallas.edu/~roman): what I'm up to at UTD
@@ -100,6 +103,9 @@ params:
     - name: rss
       url: "./index.xml"
 
+  buttons:
+    - name: bruh
+      url: "https://example.com"
   # analytics:
   #   google:
   #     SiteVerificationTag: "XYZabc"
@@ -134,9 +140,13 @@ outputs:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
+    # - identifier: posts
+    #   name: posts
+    #   url: /posts/
+    #   weight: 10
     - identifier: posts
       name: posts
-      url: /post/
+      url: /posts/
       weight: 10
     - identifier: tags
       name: tags
@@ -161,4 +171,9 @@ markup:
 # https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/
 
 permalinks:
-  post: /:filename/
+  posts: /:filename/
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
