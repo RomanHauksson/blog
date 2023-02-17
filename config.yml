@@ -71,7 +71,7 @@ params:
     buttons:
       # - name: learn more about me
       #   url: about
-      - name: read my posts ➙
+      - name: ✍ read my posts
         url: posts
 
   # home-info mode
@@ -100,8 +100,6 @@ params:
       url: "https://linkedin.com/in/romanhn"
     - name: twitter
       url: "https://twitter.com/RomanHauksson"
-    - name: rss
-      url: "./index.xml"
 
   buttons:
     - name: bruh
