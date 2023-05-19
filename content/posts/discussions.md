@@ -3,7 +3,7 @@ title: "avoid large group discussions in your social events"
 date: 2023-02-17
 # weight: 1
 # aliases: ["/first"]
-tags: ["interpersonal relationships"]
+tags: [""]
 # author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true
@@ -63,7 +63,7 @@ So you have to coordinate from the onset if you want a better conversation struc
 - Host the event in a place with enough room for people to spread out. Ideally, there will be different rooms or partly sheltered areas for some insulation between groups.
 - If you're the host, maybe it isn't so brash to manually split up a large group if it forms. You could, for example, instruct guests to move to a different group when they hear a bell you ring every 30 minutes. This might bring a "forced" vibe to the party, but it also gives people plausible deniability when they want to leave a conversation. If they're engaged, they're totally allowed to ignore the bell and continue the conversation. But if they're bored, they can say "Sorry, looks like I have to move to a new group. What can you do? But it was nice meeting you!".
 
-## Putting my money where my mouth is
+## putting my money where my mouth is
 
 I don't make this post to rag on the organizer of the philosophy club, or anyone else who has held a suboptimal social gathering. In fact, after the event, I pulled the philosophy club leader aside after the meeting to give him my thoughts constructively, and he was receptive to experimenting with a different structure for the next meeting. Different hosts have different goals for their events, and that's fine. I just value human connection a lot. It brings me *a lot of joy* when I witness two people meet and get along well because of something I initiated. I'm not trying to be cheesy – it genuinely makes me super excited when I hear I've created a friendship.
 

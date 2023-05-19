@@ -3,7 +3,7 @@ title: "the 2/3 rule for multi-factor authentication"
 date: 2023-02-03
 # weight: 1
 # aliases: ["/first"]
-tags: ["cybersecurity"]
+tags: ["technology"]
 # author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true

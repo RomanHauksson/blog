@@ -1,6 +1,6 @@
 ---
 title: "posts"
-layout: "archives"
+layout: "post"
 url: "/posts/"
-summary: archive
+summary: posts
 ---

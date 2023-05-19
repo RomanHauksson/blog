@@ -3,7 +3,7 @@ title: "tools for finding information on the internet"
 date: 2023-01-29
 # weight: 1
 # aliases: ["/first"]
-tags: ["practical"]
+tags: ["technology"]
 # author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true
@@ -12,7 +12,7 @@ draft: false
 hidemeta: false
 comments: false
 # description: "Links to websites that help you navigate the cyberspace and overcome obstacles to truth."
-canonicalURL: "https://roman.computer/finding_information"
+canonicalURL: "https://roman.computer/information"
 disableHLJS: true # to disable highlightjs
 disableShare: true
 hideSummary: false

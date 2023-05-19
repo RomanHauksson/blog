@@ -71,7 +71,7 @@ params:
     buttons:
       # - name: learn more about me
       #   url: about
-      - name: ✍ read my posts
+      - name: ✍️ read my posts
         url: posts
 
   # home-info mode
@@ -95,14 +95,14 @@ params:
 
   socialIcons:
     - name: github
-      url: "https://github.com/romanhn"
+      url: "https://github.com/romanhauksson"
     - name: linkedin
-      url: "https://linkedin.com/in/romanhn"
-    - name: twitter
-      url: "https://twitter.com/RomanHauksson"
+      url: "https://linkedin.com/in/romanhauksson"
+    - name: cv
+      url: "/resume.pdf"
 
   buttons:
-    - name: bruh
+    - name: example
       url: "https://example.com"
   # analytics:
   #   google:
@@ -138,10 +138,6 @@ outputs:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    # - identifier: posts
-    #   name: posts
-    #   url: /posts/
-    #   weight: 10
     - identifier: posts
       name: posts
       url: /posts/
@@ -150,10 +146,10 @@ menu:
       name: tags
       url: /tags/
       weight: 20
-    - identifier: search
-      name: search
-      url: /search/
-      weight: 30
+    # - identifier: search
+    #   name: search
+    #   url: /search/
+    #   weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:

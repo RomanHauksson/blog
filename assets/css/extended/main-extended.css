@@ -1,0 +1,11 @@
+.main > header > h1 {
+    text-transform: lowercase;
+}
+
+.breadcrumbs > a {
+    text-transform: lowercase;
+}
+
+main.main {
+    padding: 0;
+}
