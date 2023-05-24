@@ -1,0 +1,40 @@
+.terms-tags li {
+    display: inline-block;
+    margin: 10px;
+    font-weight: 500;
+}
+
+.terms-tags a {
+    display: block;
+    padding: 3px 10px;
+    background: var(--tertiary);
+    border-radius: 6px;
+    transition: transform 0.1s;
+}
+
+.terms-tags a:active {
+    background: var(--tertiary);
+    transform: scale(0.96);
+}
+
+.tag {
+    box-shadow:
+        12px 12px 24px #00000031,
+        6px 4px 8px var(--inner-top-left-shadow) inset,
+        -6px -4px 8px -2px var(--inner-bottom-right-shadow) inset;
+    border: none;
+    transition: 0.08s;
+}
+
+.tag:hover {
+    transform: rotate(3deg);
+}
+
+.tag:active {
+    transform: scale(0.93);
+}
+
+.terms-tags li {
+    margin-right: 0;
+    margin-left: 0;
+}

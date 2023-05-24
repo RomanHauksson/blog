@@ -1,0 +1,129 @@
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: calc(var(--nav-width) + var(--gap) * 2);
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    height: var(--header-height);
+    align-items: center;
+}
+
+.nav a {
+    display: block;
+}
+
+.logo,
+#menu {
+    display: flex;
+    margin: auto var(--gap);
+}
+
+.logo {
+    flex-wrap: inherit;
+    /* align-items: center; */
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo a img, .logo a svg {
+    display: inline;
+    vertical-align: middle;
+    pointer-events: none;
+    transform: translate(0, -10%);
+    border-radius: 6px;
+    margin-inline-end: 8px;
+}
+
+button#theme-toggle {
+    font-size: 26px;
+    margin: auto 4px;
+}
+
+body.dark #moon {
+    vertical-align: middle;
+    display: none;
+}
+
+body:not(.dark) #sun {
+    display: none;
+}
+
+#menu {
+    list-style: none;
+    /* word-break: keep-all; */
+    /* overflow-x: auto; */
+    /* white-space: nowrap; */
+}
+
+#menu li + li {
+    margin-inline-start: var(--gap);
+}
+
+#menu a {
+    font-size: 16px;
+}
+
+.logo-switches {
+    display: inline-flex;
+    margin: auto 4px;
+}
+
+.logo-switches {
+    flex-wrap: inherit;
+}
+
+/* past this point is what i added */
+
+.link {
+    border-radius: var(--radius);
+    padding: 0.5rem;
+    box-shadow:
+        12px 12px 24px #00000031,
+        6px 4px 8px var(--inner-top-left-shadow) inset,
+        -6px -4px 8px -2px var(--inner-bottom-right-shadow) inset;
+    border: none;
+    transition: 0.08s;
+    background-color: var(--tertiary);
+}
+
+.link:hover {
+    transform: scale(1.05);
+}
+
+.link:active {
+    transform: scale(0.93);
+}
+
+.active {
+    background-color: var(--primary) !important;
+    color: var(--theme);
+}
+
+header.header {
+    padding: 0;
+    margin: 0;
+}
+
+nav.nav {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+
+div.logo {
+    padding: 0;
+    margin: 0;
+}
+
+div.logo-switches {
+    padding: 0;
+    margin: 0;
+}
+
+#menu {
+    padding: 0;
+    margin: 0;
+}

@@ -30,7 +30,6 @@
 }
 
 .social-icons {
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -50,43 +49,38 @@
 }
 
 .social-icons a:hover {
-    background-color: var(--tertiary);
+    transform: scale(1.05);
+}
+
+.social-icons a:active {
+    transform: scale(0.98);
 }
 
 .social-icons a svg {
     vertical-align: middle;
 }
 
-.button {
+.button, .social-icons a {
     box-shadow:
         12px 12px 24px #00000031,
         6px 4px 8px var(--inner-top-left-shadow) inset,
         -6px -4px 8px -2px var(--inner-bottom-right-shadow) inset;
     border: none;
+    background-color: var(--tertiary);
+}
+
+.headshot {
+    box-shadow:
+        12px 12px 24px #00000031,
+        6px 4px 8px var(--inner-top-left-shadow) inset,
+        -12px -8px 8px -2px var(--inner-bottom-right-shadow) inset;
+    border-radius: none;
 }
 
 .button:hover {
-    /* background-color: var(--entry); */
-    /* color: var(--secondary); */
     transform: rotate(3deg);
 }
 
 .button:active {
     transform: scale(0.95);
 }
-
-/* .logo {
-    padding: 0;
-    margin: 0;
-}
-
-.logo a {
-    border-radius: 0 0 var(--radius) 0;
-    padding-left: var(--gap);
-    padding-right: var(--gap);
-}
-
-.logo a:hover {
-    background-color: var(--entry);
-    /* color: var(--secondary);
-} */
