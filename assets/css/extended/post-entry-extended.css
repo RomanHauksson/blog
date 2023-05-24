@@ -1,0 +1,15 @@
+.post-entry {
+    box-shadow:
+        12px 12px 24px #00000031,
+        6px 4px 8px var(--inner-top-left-shadow) inset,
+        -6px -4px 8px -2px var(--inner-bottom-right-shadow) inset;
+    border: none;
+}
+
+.post-entry:hover {
+    transform: rotate(1deg);
+}
+
+.post-entry:active {
+    transform: scale(0.97);
+}

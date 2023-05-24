@@ -10,10 +10,18 @@
     border-radius: var(--radius);
     padding-inline-start: 14px;
     padding-inline-end: 14px;
-    transition: 0.08s;
     line-height: 1.2;
     padding-top: 0.5rem;
     padding-bottom: 0.7rem;
+}
+
+.paginav a, .post-tag {
+    box-shadow:
+        12px 12px 24px #00000031,
+        6px 4px 8px var(--inner-top-left-shadow) inset,
+        -6px -4px 8px -2px var(--inner-bottom-right-shadow) inset;
+    border: none;
+    transition: 0.08s;
 }
 
 .paginav .title {
@@ -29,51 +37,21 @@
 }
 
 .paginav a:hover {
-    transform: rotate(2deg);
+    transform: rotate(1deg);
+}
+
+.post-tag:hover {
+    transform: rotate(3deg);
 }
 
 .paginav a:active {
-    transform: scale(0.95);
+    transform: scale(0.97);
+}
+
+.post-tag:active {
+    transform: scale(0.93);
 }
 
 .post-tags {
     margin-top: 0.5rem;
 }
-
-/* .paginav {
-    margin: 10px 0;
-    display: flex;
-    line-height: 30px;
-    border-radius: var(--radius);
-} */
-
-/* .paginav a {
-    padding-inline-start: 14px;
-    padding-inline-end: 14px;
-    border-radius: var(--radius);
-}
-
-.paginav .title {
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: small;
-    color: var(--secondary);
-} */
-
-/* .paginav .prev,
-.paginav .next {
-    width: 50%;
-} */
-
-/* .paginav span:hover:not(.title) {
-    box-shadow: 0 1px 0;
-}
-
-.paginav .next {
-    margin-inline-start: auto;
-    text-align: right;
-} */
-
-/* [dir="rtl"] .paginav .next {
-    text-align: left;
-} */
