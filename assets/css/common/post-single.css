@@ -303,7 +303,6 @@
     margin-bottom: 5px;
 }
 
-.post-tags a,
 .share-buttons {
     border-radius: var(--radius);
     background: var(--code-bg);
@@ -312,6 +311,7 @@
 
 .post-tags a {
     display: block;
+    border-radius: var(--radius);
     padding-inline-start: 14px;
     padding-inline-end: 14px;
     color: var(--secondary);
