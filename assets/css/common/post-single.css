@@ -69,12 +69,12 @@
     font-size: 12px;
 }
 
-.post-content a,
-.toc a:hover {
+/* .post-content a,
+a:hover {
     box-shadow: 0 1px 0;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
-}
+} */
 
 .post-content a code {
     margin: auto 0;
@@ -255,11 +255,11 @@
 }
 
 .toc {
-    margin: 0 2px 40px 2px;
-    border: 1px solid var(--border);
+    /* margin: 0 2px 40px 0px; */
     background: var(--code-bg);
     border-radius: var(--radius);
     padding: 0.4em;
+
 }
 
 .dark .toc {
@@ -353,44 +353,6 @@ h6:hover .anchor {
     user-select: none;
 }
 
-/* .paginav {
-    margin: 10px 0;
-    display: flex;
-    line-height: 30px;
-    border-radius: var(--radius);
-} */
-
-/* .paginav a {
-    padding-inline-start: 14px;
-    padding-inline-end: 14px;
-    border-radius: var(--radius);
-}
-
-.paginav .title {
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: small;
-    color: var(--secondary);
-} */
-
-/* .paginav .prev,
-.paginav .next {
-    width: 50%;
-} */
-
-/* .paginav span:hover:not(.title) {
-    box-shadow: 0 1px 0;
-}
-
-.paginav .next {
-    margin-inline-start: auto;
-    text-align: right;
-} */
-
-/* [dir="rtl"] .paginav .next {
-    text-align: left;
-} */
-
 h1>a>svg {
     display: inline;
 }
@@ -398,4 +360,11 @@ h1>a>svg {
 img.in-text {
     display: inline;
     margin: auto;
+}
+
+.toc {
+    box-shadow:
+        12px 12px 24px #00000031,
+        6px 4px 8px var(--inner-top-left-shadow) inset,
+        -6px -4px 8px -2px var(--inner-bottom-right-shadow) inset;
 }
