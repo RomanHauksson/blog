@@ -2,6 +2,8 @@
 
 This used to be my personal homepage and blog, built using the static site generator [Hugo](https://gohugo.io/) and the Hugo theme [PaperMod](https://github.com/adityatelange/hugo-PaperMod/) that I modified.
 
+You can visit the archived site at [hugo.roman.computer](https://hugo.roman.computer).
+
 ## modifications
 
 - Buttons are in the style of claymorphism and rotate when you hover over them
