@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Roman Hauksson</title>
+    <link>https://roman.computer/posts/</link>
+    <description>Recent content in Posts on Roman Hauksson</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 10 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://roman.computer/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📐 graphing tangent lines to two circles</title>
+      <link>https://roman.computer/tangents/</link>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://roman.computer/tangents/</guid>
+      <description>A system of equations for the lines tangent to two circles on the coordinate plane.</description>
+    </item>
+    
+    <item>
+      <title>🔑 a talk about password security</title>
+      <link>https://roman.computer/password_security/</link>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://roman.computer/password_security/</guid>
+      <description>Recordings of a talk i gave about password security and automating targeted password guesses using GPT-3.</description>
+    </item>
+    
+    <item>
+      <title>🎤 MF FOOM: AI-generated MF DOOM songs</title>
+      <link>https://roman.computer/mf_foom/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://roman.computer/mf_foom/</guid>
+      <description>I fine-tuned GPT-3 on the lyrics of 96 MF DOOM songs to write lyrics in his style. Then, i cloned his voice to a text-to-voice model to make him rap them.</description>
+    </item>
+    
+    <item>
+      <title>⚖️ local regulation of artificial intelligence in the US</title>
+      <link>https://roman.computer/local_ai_regulation/</link>
+      <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://roman.computer/local_ai_regulation/</guid>
+      <description>An overview of the issues about the progress of artificial intelligence that are relevant to local regulators.</description>
+    </item>
+    
+    <item>
+      <title>💬 avoid large group discussions in your social events</title>
+      <link>https://roman.computer/discussions/</link>
+      <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://roman.computer/discussions/</guid>
+      <description>If you&amp;#39;re organizing a social event, I strongly recommend that you structure it in a way that encourages small group discussions over large ones.</description>
+    </item>
+    
+    <item>
+      <title>🔐 the 2/3 rule for multi-factor authentication</title>
+      <link>https://roman.computer/mfa/</link>
+      <pubDate>Fri, 03 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://roman.computer/mfa/</guid>
+      <description>I propose the &amp;#34;2/3 rule&amp;#34; for multi-factor authentication: to access a system, a user must pass at least two out of three possible methods for authentication. Unlike standard 2-factor authentication, this strategy protects against both false positives (granting access to a hacker) and false negatives (denying access to a legitimate user).</description>
+    </item>
+    
+    <item>
+      <title>🔍 tools for finding information on the internet</title>
+      <link>https://roman.computer/information/</link>
+      <pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://roman.computer/information/</guid>
+      <description>Links to websites that help you navigate the cyberspace and overcome obstacles to truth.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,337 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>📐 graphing tangent lines to two circles | Roman Hauksson</title><meta name=keywords content><meta name=description content="A system of equations for the lines tangent to two circles on the coordinate plane."><meta name=author content><link rel=canonical href=https://roman.computer/tangents><link crossorigin=anonymous href=/assets/css/stylesheet.855e48320613a3e8fc0ca0ac97a03a5c8da75978d3f5e325dc8e2dd8f8b5c146.css integrity="sha256-hV5IMgYTo+j8DKCsl6A6XI2nWXjT9eMl3I4t2Pi1wUY=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG+9vmJ0cTS+ovo0FeA=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://roman.computer/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://roman.computer/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://roman.computer/favicon-32x32.png><link rel=apple-touch-icon href=https://roman.computer/apple-touch-icon.png><link rel=mask-icon href=https://roman.computer/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css integrity=sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js integrity=sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js integrity=sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05 crossorigin=anonymous onload='renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"\\[",right:"\\]",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})'></script><meta property="og:title" content="📐 graphing tangent lines to two circles"><meta property="og:description" content="A system of equations for the lines tangent to two circles on the coordinate plane."><meta property="og:type" content="article"><meta property="og:url" content="https://roman.computer/tangents/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-07-10T00:00:00+00:00"><meta property="article:modified_time" content="2023-07-10T00:00:00+00:00"><meta property="og:site_name" content="Roman Hauksson"><meta name=twitter:card content="summary"><meta name=twitter:title content="📐 graphing tangent lines to two circles"><meta name=twitter:description content="A system of equations for the lines tangent to two circles on the coordinate plane."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://roman.computer/posts/"},{"@type":"ListItem","position":2,"name":"📐 graphing tangent lines to two circles","item":"https://roman.computer/tangents/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"📐 graphing tangent lines to two circles","name":"📐 graphing tangent lines to two circles","description":"A system of equations for the lines tangent to two circles on the coordinate plane.","keywords":[""],"articleBody":"context In 2021 March, i had to write a paper called the “Extended Essay”, which was sort of the culminating work for the International Baccalaureate program at my high school. I was one of the 3.2% of candidates to write it under the “Mathematics” subject and one of 20% to earn an A for it!1 :D\nEven though it’s poorly written, i decided to throw it up here, with some of the cruft trimmed off. The conclusion is that tangent lines to circles can be modeled by the following system of equations.\n$$ \\begin{aligned} a \u0026= x_1-x_2 \u0026 b \u0026= y_1-y_2 \u0026 c \u0026= r_1 \\pm r_2 \\end{aligned} $$\n$$\\begin{aligned} S_t = \\frac{b \\sqrt{a^2+b^2-c^2} \\pm ac}{a \\sqrt{a^2+b^2-c^2} \\mp bc} \\end{aligned}$$\n$$\\begin{aligned} x_i \u0026= x_1 \\mp \\frac{S_t r_1}{\\sqrt{S_t^2+1}} \u0026 y_i \u0026= \\pm \\sqrt{r_1^2-(x_i-x_1)^2}+y_1 \\end{aligned}$$\n$$\\begin{aligned} y \u0026= S_t(x - x_i) + y_i \\end{aligned}$$\nSubstitute $(x_1, y_1)$ with the coordinates of the first circle and $r_1$ with its radius. Likewise, substitute $x_2$, $y_2$, and $r_2$ for the second circle.\nUse different states of the three plus–minus signs to generate eight different possible lines, and manually choose four from those eight as your four tangent lines (two internal and two external).\nintroduction A couple years ago, i sometimes liked to make art in Desmos (an online graphing calculator), and one of my almost-finished pieces was a bicycle. I had written the equation for each line that made up the drawing of the bike, and i could even adjust the seat height and pedal lengths with variable sliders.\nHowever, one feature of the bike was notably missing: the chain connecting the gears. This would have taken the form of lines tangent to the two circles representing the gears, but i didn’t know how to graph that precisely at the time.\n① a bicycle chain, resembling circles with tangent lines I’ve since lost the original Desmos project, but my unsolved problem has tormented me ever since. How do you write the linear equation for each of the lines that are tangent to two circles if you know the radii and coordinates of those circles?\nexternal tangent lines There are two circles:\nCircle 1 with center $C_1=(x_1,y_1)$ and radius $r_1$ Circle 2 with center $C_2=(x_2,y_2)$ and radius $r_2$ $r_1\\geq r_2$ ② external tangents of two circles A line is drawn between the centers of the circles, called $C(x)$, and both external tangent lines $t_1(x)$ and $t_2(x)$ are drawn. The points of intersection between the tangent lines and circle 1 are $i_1=(x_{i1},y_{i1})$ and $i_2=(x_{i2},y_{i2})$. The points of intersection on circle 2 are $i_3=(x_{i3},y_{i3})$ and $i_4=(x_{i4},y_{i4})$. All three lines intersect at point $P$. The angle between the first tangent line and the line that connects the centers of the circles is $\\angle C_1Pi_1$.\nslopes of the external tangents Angle $\\angle C_1 i_1 P$ is a right angle because it is the angle between a tangent to a circle and a radius that passes through the point of tangency, and the same is true for $\\angle C_2 i_3 P$⁠. Because these right angles are congruent, and because $\\triangle C_1 P i_1$ and $\\triangle C_2 P i_2$ share the angle $\\angle C_1 P i_1$, this makes the triangles similar.\nBecause these triangles are similar, the ratio between corresponding sides is constant. Therefore,\n$$\\frac{r_1}{r_2} = \\frac{h_1}{h_2}$$\nWe can substitute $h_1$ with the two lengths that make it up: $h_2+d$. Then, by rewriting the equation, we can solve for $h_2$.\n$$ \\begin{aligned} \\frac{r_1}{r_2} \u0026= \\frac{h_2+d}{h_2} \\\\ r_1h_2 \u0026= r_2(h_2+d) \\\\ r_1h_2 \u0026= r_2h_2+r_2d \\\\ r_1h_2 \u0026= r_2h_2+r_2d \\\\ r_1h_2-r_2h_2 \u0026= r_2d \\\\ h_2(r_1-r_2) \u0026= r_2d \\\\ h_2 \u0026= \\frac{r_2d}{r_1-r_2} \\end{aligned} $$\nNow that $h_2$ is defined, we can use trigonometry to define the angle between the line that connects the circles’ centers and the first tangent line. This angle is $\\angle C_2 P i_3$, or $\\theta$.\nConsider triangle $\\triangle C_2 i_3 P$:\n③ triangle △C2i3P Because of the definition of the sine of an angle (the ratio between the opposing side and the hypotenuse in a right triangle), $\\sin{\\theta} =\\frac{r_2}{h_2}$. By taking the inverse sine of each side, we can define $\\theta$: $$\\theta =\\arcsin{\\left(\\frac{r_2}{h_2}\\right)}$$ To find the angle of the first external tangent line, we can add $\\theta$ to the angle of $C(x)$ with respect to the $x$-axis. Similarly, we can subtract $\\theta$ from the angle of $C(x)$ to find the angle of the second tangent line. $$\\begin{aligned} \\theta_t=\\theta_C \\pm \\theta \\end{aligned}$$\n④ angles of external tangents and C(x) But how do we know the angle of $C(x)$? The slope of $C(x)$ can be found by using the slope formula and substituting with the coordinates of the centers of the circles. Then, we can convert this slope into an angle by finding its inverse tangent.\n$$\\begin{aligned} \\theta_C \u0026= \\arctan{\\left( S_C \\right)} \\\\ \\theta_C \u0026= \\arctan{\\left( \\frac{\\Delta y}{\\Delta x} \\right)} \\\\ \\theta_C \u0026= \\arctan{\\left( \\frac{y_1-y_2}{x_1-x_2} \\right)} \\end{aligned} $$\nNow, we can substitute the values of $\\theta_C$ and $\\theta$: $$ \\begin{aligned} \\theta_t \u0026= \\theta_C \\pm \\theta \\\\ \\theta_C \u0026= \\arctan{\\left( \\frac{y_1-y_2}{x_1-x_2} \\right)} \\\\ \\theta \u0026= \\arcsin{\\left( \\frac{r_2}{h_2} \\right)} \\\\ \\theta_t \u0026= \\arctan{\\left( \\frac{y_1-y_2}{x_1-x_2} \\right)} \\pm \\arcsin{\\left( \\frac{r_2}{h_2} \\right)} \\end{aligned} $$\nThen, we can substitute for $h_2$ and simplify:\n$$ \\begin{aligned} h_2 \u0026= \\frac{r_2d}{r_1-r_2} \\\\ \\theta_t \u0026= \\arctan{\\left(\\frac{y_1-y_2}{x_1-x_2}\\right)} \\pm \\arcsin{\\left(\\frac{r_2}{\\frac{r_2d}{r_1 - r_2}}\\right)} \\\\ \\theta_t \u0026= \\arctan{\\left(\\frac{y_1-y_2}{x_1-x_2}\\right)} \\pm \\arcsin{\\left(\\frac{r_2(r_1 - r_2)}{r_2d}\\right)} \\\\ \\theta_t \u0026= \\arctan{\\left(\\frac{y_1-y_2}{x_1-x_2}\\right)} \\pm \\arcsin{\\left(\\frac{r_1 - r_2}{d}\\right)} \\end{aligned} $$\nWe can then substitute for $d$. $d$ is the distance between the centers of the circles, so we can use the distance formula with $C_1$ and $C_2$ as points.\n$$ \\begin{aligned} d \u0026= \\sqrt{(x_1-x_2)^2+(y_1-y_2)^2} \\\\ \\theta_t \u0026= \\arctan{\\left( \\frac{y_1-y_2}{x_1-x_2} \\right)} \\pm \\arcsin{\\left(\\frac{r_1 - r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\\right)} \\end{aligned} $$\nBecause the tangent of the angle of a line produces its slope, we can take the tangent of both sides to generate an equation for both of the slopes of the external tangent lines: $$S_t = \\tan{\\left(\\arctan{\\left(\\frac{y_1-y_2}{x_1-x_2}\\right)} \\pm \\arcsin{\\left(\\frac{r_1 - r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\\right)}\\right)}$$ This equation, which uses trigonometric functions inside of a trigonometric function, is not very elegant. To rewrite it, we can use a trigonometric identity for the tangent of a sum or difference:\n$$\\tan{(\\alpha \\pm \\beta)}=\\frac{\\tan{(\\alpha)} \\pm \\tan{(\\beta)}}{1 \\mp \\tan{(\\alpha)}\\tan{(\\beta)}}$$\nIn this case, $\\alpha = \\arctan{\\left(\\frac{y_1-y_2}{x_1-x_2}\\right)}$ and $\\beta = \\arcsin{\\left(\\frac{r_1 - r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\\right)}$.\nFor ease of explanation, we’ll first find $\\tan{(\\alpha)}$ and $\\tan{(\\beta)}$ separately, then substitute them into the identity.\nThe tangent of $\\alpha$ is simple to find, because the arctangent and the tangent functions cancel each other out:\n$$\\begin{aligned} \\tan{(\\alpha)} \u0026= \\tan{\\left( \\arctan{\\left(\\frac{y_1-y_2}{x_1-x_2}\\right)} \\right)} \\\\ \\tan{(\\alpha)} \u0026= \\frac{y_1-y_2}{x_1-x_2} \\end{aligned}$$\nHowever, the tangent of $\\beta$ is trickier because the tangent function doesn’t cancel out the arcsine function. To remedy this, we can use an identity for the tangent of an arcsine, as demonstrated by figure 5.\n⑤ right triangle demonstration of tan (arcsin(x)) In figure 5, the sine of angle $\\theta$ is the ratio between the lengths of the opposite side and the hypotenuse, or $\\frac{x}{1}=x$. Therefore, the arcsine of this ratio equals $\\theta$: $$\\arcsin{(x)}=\\theta$$ The tangent of $\\theta$, or in other words, the tangent of $\\arcsin{(x)}$, is equal to the ratio between the opposite side and the adjacent side. The length of the adjacent side can be found using the Pythagorean theorem: $\\sqrt{1-x^2}$. Therefore, $$\\tan{\\left(\\arcsin{(x)}\\right)}=\\frac{x}{\\sqrt{1-x^2}}$$ We can now use this identity to find $\\tan{(\\beta)}$: $$ \\begin{aligned} \\tan{(\\beta)} \u0026= \\tan{\\left(\\arcsin{\\left(\\frac{r_1 - r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\\right)}\\right)} \\\\ \\tan{(\\beta)} \u0026= \\frac{\\frac{r_1 - r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}}{\\sqrt{1-\\left(\\frac{r_1 - r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\\right)^2}} \\\\ \\tan{(\\beta)} \u0026= \\frac{\\frac{r_1 - r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}}{\\sqrt{1-\\frac{(r_1 - r_2)^2}{(x_1-x_2)^2+(y_1-y_2)^2}}} \\\\ \\tan{(\\beta)} \u0026= \\frac{\\frac{r_1 - r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}}{\\sqrt{\\frac{(x_1-x_2)^2+(y_1-y_2)^2}{(x_1-x_2)^2+(y_1-y_2)^2}-\\frac{(r_1 - r_2)^2}{(x_1-x_2)^2+(y_1-y_2)^2}}} \\\\ \\tan{(\\beta)} \u0026= \\frac{\\frac{r_1 - r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}}{\\sqrt{\\frac{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}{(x_1-x_2)^2+(y_1-y_2)^2}}} \\\\ \\tan{(\\beta)} \u0026= \\frac{\\frac{r_1 - r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}}{\\frac{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}} \\\\ \\tan{(\\beta)} \u0026= \\frac{r_1 - r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}} \\end{aligned} $$ Now that we know $\\tan{(\\alpha)}$ and $\\tan{(\\beta)}$, we can return to rewriting the slope equation using the identity for the tangent of a sum or difference.\n$$ \\begin{aligned} S_t \u0026= \\tan{\\left(\\arctan{\\left(\\frac{y_1-y_2}{x_1-x_2}\\right)} \\pm \\arcsin{\\left(\\frac{r_1 - r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\\right)}\\right)} \\\\ \\tan{(\\alpha \\pm \\beta)} \u0026= \\frac{\\tan{(\\alpha)} \\pm \\tan{(\\beta)}}{1 \\mp \\tan{(\\alpha)}\\tan{(\\beta)}} \\\\ S_t \u0026= \\frac{\\frac{y_1-y_2}{x_1-x_2} \\pm \\frac{r_1 - r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}}{1 \\mp \\frac{y_1-y_2}{x_1-x_2} \\cdot \\frac{r_1 - r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}} \\\\ S_t \u0026= \\frac{\\frac{y_1-y_2}{x_1-x_2} \\pm \\frac{r_1 - r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}}{1 \\mp \\frac{(y_1-y_2)(r_1 - r_2)}{(x_1-x_2)\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}} \\end{aligned} $$\nWe can rewrite each term with a common denominator. $$\\begin{aligned} S_t \u0026= \\frac{\\frac{(y_1-y_2)\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}{(x_1-x_2)\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}} \\pm \\frac{(x_1-x_2)(r_1 - r_2)}{(x_1-x_2)\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}}{\\frac{(x_1-x_2)\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}{(x_1-x_2)\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}} \\mp \\frac{(y_1-y_2)(r_1 - r_2)}{(x_1-x_2)\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}} \\end{aligned}$$ Finally, multiplying each side by the common denominator yields the final equation for the slopes of the external tangent lines: $$S_t = \\frac{(y_1-y_2)\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2} \\pm (x_1-x_2)(r_1 - r_2)}{(x_1-x_2)\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2} \\mp (y_1-y_2)(r_1 - r_2)}$$ At first glance, this equation doesn’t appear any simpler than the one involving nested trigonometric functions. However, by applying the following substitutions, the symmetry and elegance of this equation becomes clear: $$\\begin{gathered} a = x_1-x_2 \\qquad b = y_1-y_2 \\qquad c = r_1-r_2 \\\\ S_t = \\frac{b \\sqrt{a^2+b^2-c^2} \\pm ac}{a \\sqrt{a^2+b^2-c^2} \\mp bc} \\end{gathered}$$\npoints on the external tangents In order to define an exact equation for the external tangents, defining the slopes isn’t enough. We also need a point on each of the slopes, and the easiest points to use are the points of tangency on circle 1.\nA point of tangency on circle 1 will have an instantaneous slope equal to that of the tangent line it corresponds to. Therefore, to figure out which points on circle 1 can qualify as points of tangency, we need to find the derivative (the slope at each point) of the equation of circle 1 and set it equal to the tangent’s slope, and then solve for the x-value of the point of tangency. This can then be fed back into the circle equation to define the other coordinate of the point of tangency, which would complete the definition of the tangent line function.\nThis method presents one key problem, however: a circle equation is not a function, and so its derivative would not be a function either. At each x-value in the domain of the graph of the circle, there are two possible y-values and two possible slopes, and as a result, there are two points on circle 1 that could qualify as points of tangency for each tangent line. Because there are two tangent lines, this makes four possible points of tangency, but only two of them are correct.\n⑥ two points of tangency on a circle that have the same instantaneous slope Ultimately, i decided to accept the fact that this approach would generate not two, but four possible external tangents, and someone using this equation would have to manually decide which definitions to use.\nThe first step is to find the derivative of the circle equation. However, this equation is not defined simply in terms of $y$, as it’s based on the Pythagorean theorem. $$(x-x_1)^2+(y-y_1)^2=r_1^2$$ Implicit differentiation would not work in this case, so we need to rewrite the circle equation in terms of $y$ before we differentiate it with respect to $x$. $$\\begin{aligned} (x-x_1)^2+(y-y_1)^2 \u0026= r_1^2 \\\\ (y-y_1)^2 \u0026= r_1^2-(x-x_1)^2 \\\\ y-y_1 \u0026= \\pm \\sqrt{r_1^2-(x-x_1)^2} \\\\ y \u0026= \\pm \\sqrt{r_1^2-(x-x_1)^2}+y_1 \\end{aligned}$$ Now, we can find the derivative of this equation to find the slope of any given point on circle 1.\n$$\\begin{aligned} \\frac{\\mathrm{d}}{\\mathrm{d}x} [y] \u0026= \\frac{\\mathrm{d}}{\\mathrm{d}x} \\left[ \\pm \\sqrt{r_1^2-(x-x_1)^2}+y_1 \\right] \\\\ \\frac{\\mathrm{d}y}{\\mathrm{d}x} \u0026= \\pm \\frac{\\mathrm{d}}{\\mathrm{d}x} \\left[ \\sqrt{r_1^2-(x-x_1)^2} \\right] \\\\ \\frac{\\mathrm{d}y}{\\mathrm{d}x} \u0026= \\pm \\frac{\\mathrm{d}}{\\mathrm{d}x} \\left[ \\left( r_1^2-(x-x_1)^2 \\right)^{\\frac{1}{2}} \\right] \\end{aligned}$$\nWe can use the chain rule for derivatives to continue. $$\\begin{aligned} \\frac{\\mathrm{d}y}{\\mathrm{d}x} \u0026= \\pm \\frac{1}{2} \\left( r_1^2-(x-x_1)^2 \\right)^{-\\frac{1}{2}} \\left( \\frac{\\mathrm{d}}{\\mathrm{d}x} \\left[ r_1^2-(x-x_1)^2 \\right] \\right) \\\\ \\frac{\\mathrm{d}y}{\\mathrm{d}x} \u0026= \\pm \\frac{1}{2 \\sqrt{r_1^2-(x-x_1)^2}} \\left( -\\frac{\\mathrm{d}}{\\mathrm{d}x} \\left[ (x-x_1)^2 \\right] \\right) \\\\ \\frac{\\mathrm{d}y}{\\mathrm{d}x} \u0026= \\pm \\frac{1}{2 \\sqrt{r_1^2-(x-x_1)^2}} \\left( 2(x-x_1)(1) \\right) \\\\ \\frac{\\mathrm{d}y}{\\mathrm{d}x} \u0026= \\pm \\frac{2(x-x_1)}{2 \\sqrt{r_1^2-(x-x_1)^2}} \\\\ \\frac{\\mathrm{d}y}{\\mathrm{d}x} \u0026= \\pm \\frac{x-x_1}{\\sqrt{r_1^2-(x-x_1)^2}} \\end{aligned}$$ This resulting equation gives the relationship between the slope of the tangent line ($\\frac{\\mathrm{d}y}{\\mathrm{d}x}$) and the $x$-coordinate of the point of tangency on circle 1.\nWe need to rewrite this equation in terms of $x$, because in this case, $x$ is the $x$-coordinate of the point of tangency, which will be used in the tangent line equation. However, the algebra that enables us to do this is long and confusing. To help make the process easier to read, we will temporarily reassign each variable to a single letter each: $$\\begin{aligned} \\frac{\\mathrm{d}y}{\\mathrm{d}x} = S_t \u0026= a \\\\ r_1 \u0026= b \\\\ x = x_i \u0026= c \\\\ x_1 \u0026= d \\end{aligned}$$ Essentially, we can rewrite the equation as a sum of terms, which can be rearranged into a quadratic equation with multi-term coefficients. These can be plugged into the quadratic formula in order to solve for $c$, which represents $x_i$. $$\\begin{aligned} a \u0026= \\pm \\frac{c-d}{\\sqrt{b^2-(c-d)^2}} \\\\ \\pm a \\sqrt{b^2-(c-d)^2} \u0026= c-d \\\\ \\left( \\pm a \\sqrt{b^2-(c-d)^2} \\right)^2 \u0026= (c-d)^2 \\\\ a^2(b^2-(c-d)^2) \u0026= (c-d)^2 \\\\ a^2(b^2-(c^2-2cd+d^2)) \u0026= c^2 - 2cd +d^2 \\\\ a^2(b^2-c^2+2cd-d^2) \u0026= c^2 - 2cd +d^2 \\\\ a^2b^2-a^2c^2+2a^2cd-a^2d^2 \u0026= c^2 - 2cd +d^2 \\\\ a^2b^2 - a^2c^2 + 2a^2cd - a^2d^2 - c^2 + 2cd - d^2 \u0026= 0 \\\\ - a^2c^2 - c^2 + 2a^2cd + 2cd + a^2b^2 - a^2d^2 - d^2 \u0026= 0 \\\\ c^2(- a^2 - 1) + c(2a^2d + 2d) + (a^2b^2 - a^2d^2 - d^2) \u0026= 0 \\end{aligned}$$ Now that the equation is in the form of a quadratic, we can use the quadratic formula to determine the solutions for $c$. $$c = \\frac{-(2a^2d+2d) \\pm \\sqrt{(2a^2d+2d)^2-4(-a^2-1)(a^2b^2 - a^2d^2 - d^2)}}{2(-a^2-1)}$$ For readability, we’ll simplify the radicand in the quadratic formula separately: $$\\begin{gathered} (2a^2d+2d)^2-4(-a^2-1)(a^2b^2 - a^2d^2 - d^2) \\\\ 4a^4d^2 + 8a^2d^2 + 4d^2 - 4(-a^4b^2 + a^4d^2 +a^2d^2 -a^2b^2 +a^2d^2 +d^2) \\\\ 4a^4d^2 + 8a^2d^2 + 4d^2 + 4a^4b^2 - 4a^4d^2 - 4a^2d^2 + 4a^2b^2 - 4a^2d^2 - 4d^2 \\\\ (4a^4d^2 - 4a^4d^2) + (8a^2d^2 - 4a^2d^2 - 4a^2d^2) + (4d^2 - 4d^2) + 4a^4b^2 + 4a^2b^2 \\\\ 4a^4b^2 + 4a^2b^2 \\end{gathered}$$ Then, we can substitute the radicand back into the quadratic formula and continue simplifying. $$\\begin{aligned} c \u0026= \\frac{-(2a^2d+2d) \\pm \\sqrt{4a^4b^2 + 4a^2b^2}}{2(-a^2-1)} \\\\ c \u0026= \\frac{-2d(a^2+1) \\pm \\sqrt{4a^4b^2 + 4a^2b^2}}{-2(a^2+1)} \\\\ c \u0026= \\frac{-2d(a^2+1) \\pm 2ab\\sqrt{a^2+1}}{-2(a^2+1)} \\\\ c \u0026= \\frac{d(a^2+1) \\mp ab \\sqrt{a^2+1}}{a^2+1} \\\\ c \u0026= \\frac{d(a^2+1)}{a^2+1} \\mp \\frac{ab \\sqrt{a^2+1}}{a^2+1} \\\\ c \u0026= d \\mp \\frac{ab \\sqrt{a^2+1}}{a^2+1} \\\\ c \u0026= d \\mp \\frac{ab (a^2+1)^{\\frac{1}{2}}}{(a^2+1)^1} \\\\ c \u0026= d \\mp ab(a^2+1)^{-\\frac{1}{2}} \\\\ c \u0026= d \\mp ab \\cdot \\frac{1}{(a^2+1)^{\\frac{1}{2}}} \\\\ c \u0026= d \\mp \\frac{ab}{\\sqrt{a^2+1}} \\end{aligned}$$ We can now reverse the temporary substitutions to give us a definition of the $x$-coordinate of the point of tangency on circle 1. $$\\begin{gathered} a = S_t \\qquad b = r_1 \\qquad c = x_i \\qquad d = x_1 \\\\ x_i = x_1 \\mp \\frac{S_t r_1}{\\sqrt{S_t^2+1}} \\end{gathered}$$ This equation is in terms of the slope of the tangent line, the $x$-coordinate of the center of circle 1, and the radius of circle 1. However, it’s important to note that the tangent’s slope is itself defined by other given values in the problem. Earlier, we manipulated the circle equation so that it was in terms of $y$, which allowed us to find its derivative with respect to $x$. We can substitute our definition of the $x$-coordinate of the point of tangency into this circle equation, allowing us to define the corresponding $y$-coordinate. $$y_i = \\pm \\sqrt{r_1^2-(x_i-x_1)^2}+y_1$$\nfinal external tangent model The slopes of the tangent lines, the $x$-coordinates of the points of tangency, and the $y$-coordinates of the points of tangency have all been defined in terms of the original parameters of the problem. By using the point-slope equation $f(x) = m (x - x_1) + y_1$, the final system of equations can be displayed: $$\\begin{aligned} S_t \u0026= \\frac{(y_1-y_2)\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2} \\pm (x_1-x_2)(r_1 - r_2)}{(x_1-x_2)\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2} \\mp (y_1-y_2)(r_1 - r_2)} \\\\ x_i \u0026= x_1 \\mp \\frac{S_t r_1}{\\sqrt{S_t^2+1}} \\\\ y_i \u0026= \\pm \\sqrt{r_1^2-(x_i-x_1)^2}+y_1 \\\\ y \u0026= S_t(x - x_i) + y_i \\end{aligned}$$ Unfortunately, because of the ambiguity of the plus-or-minus operators in the system of equations, two of the possible equations generated are not correct, and so the correct equations must be chosen manually.\n⑦ four lines generated by the external tangent system internal tangent lines ⑧ internal tangents of two circles The process for modelling the internal tangents to two circles is very similar to the process for external tangents. In figure 2, two similar triangles were used to write a ratio involving the radii and the hypotenuses. In figure 8, triangles $\\triangle C_1 P i_1$ and $\\triangle C_2 P i_3$ are similar because they share the vertical angle $\\theta$, and they both have a right angle. This allows us to equate the following ratios between corresponding sides: $$\\frac{r_2}{r_1}=\\frac{h_2}{h_1}$$ We can rewrite $h_2$ as $d-h_1$ and then solve for $h_1$: $$\\begin{aligned} \\frac{r_2}{r_1} \u0026= \\frac{d-h_1}{h_1} \\\\ \\frac{h_1r_2}{r_1} \u0026= d-h_1\\\\ h_1r_2 \u0026= r_1d-r_1h_1\\\\ h_1r_2 +r_1h_1\u0026= r_1d\\\\ h_1(r_2 +r_1) \u0026= r_1d\\\\ h_1 \u0026= \\frac{r_1d}{r_2 +r_1} \\end{aligned}$$ This definition of $h_1$ allows us to find $\\theta$ using trigonometry. We can express the sine of $\\theta$ as the ratio between the opposite side in the right triangle and the hypotenuse: $$\\sin{(\\theta)=\\frac{r_1}{h_1}}$$ Then, we can substitute for $h_1$ and solve for $\\theta$. $$\\begin{aligned} \\sin{(\\theta)}\u0026=\\frac{r_1}{ \\frac{r_1d}{r_2 +r_1}} \\\\ \\sin{(\\theta)}\u0026=\\frac{r_1(r_2 +r_1)}{r_1d} \\\\ \\sin{(\\theta)}\u0026=\\frac{r_2 +r_1}{d} \\\\ \\theta\u0026=\\arcsin{\\left(\\frac{r_2 +r_1}{d}\\right)} \\end{aligned}$$ Just like the external tangents, the angle of the internal tangents is simply the angle of $C(x)$, plus or minus the angle $\\theta$ (see figure 4{reference-type=“ref” reference=“fig:plusMinusTheta”}). Because we already found the angle of $C(x)$ (called $\\theta_C$) when we modeled the external tangents, we can use a similar formula as before: $$\\begin{aligned} \\theta_t \u0026= \\theta_C \\pm \\theta \\\\ \\theta_C \u0026= \\arctan{\\left( \\frac{y_1-y_2}{x_1-x_2} \\right)} \\\\ \\theta_t \u0026= \\arctan{\\left( \\frac{y_1-y_2}{x_1-x_2} \\right)} \\pm \\arcsin{\\left(\\frac{r_2 +r_1}{d}\\right)} \\end{aligned}$$ Then, because the tangent of the angle of a line equals the slope of the line, we can take the tangent of each side to find the slope of the internal tangent lines. $$S_t = \\tan{\\left(\\arctan{\\left( \\frac{y_1-y_2}{x_1-x_2} \\right)} \\pm \\arcsin{\\left(\\frac{r_2 +r_1}{d}\\right)}\\right)}$$ Finally, we can substitute $d$ with the formula for the distance between $C_1$ and $C_2$. $$S_t = \\tan{\\left(\\arctan{\\left(\\frac{y_1-y_2}{x_1-x_2}\\right)} \\pm \\arcsin{\\left(\\frac{r_1 + r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\\right)}\\right)}$$ This is very similar to the formula for the slope of the external tangent lines. In fact, the sole difference between the formulas is that the external tangent equation uses the difference between the circles' radii, while the internal tangent equation uses the sum of the radii. $$\\begin{aligned} S_{\\text{outer tangents}} \u0026= \\tan{\\left(\\arctan{\\left(\\frac{y_1-y_2}{x_1-x_2}\\right)} \\pm \\arcsin{\\left(\\frac{r_1 - r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\\right)}\\right)} \\\\ S_{\\text{inner tangents}} \u0026= \\tan{\\left(\\arctan{\\left(\\frac{y_1-y_2}{x_1-x_2}\\right)} \\pm \\arcsin{\\left(\\frac{r_1 + r_2}{\\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\\right)}\\right)} \\end{aligned}$$ Conveniently, this difference is consistent throughout the rest of the problem. At no point during the problem-solving process involving the external tangents was the term $r_1-r_2$ separated or modified, which means that all we need to do to adapt our model to use for the internal tangents is to replace $r_1-r_2$ with $r_1+r_2$. Or, to represent both set of tangents in the same system of equations, we can use $r_1 \\pm r_2$.\nfinal model If we rearrange the previous system of equations for external tangent lines, as well as replace $r_1-r_2$ with $r_1 \\pm r_2$, the updated system of equations can be displayed. We can mathematically model tangent lines to two circles on the coordinate plane using the following system of equations:\n$$ \\begin{aligned} a \u0026= x_1-x_2 \u0026 b \u0026= y_1-y_2 \u0026 c \u0026= r_1 \\pm r_2 \\end{aligned} $$\n$$\\begin{aligned} S_t = \\frac{b \\sqrt{a^2+b^2-c^2} \\pm ac}{a \\sqrt{a^2+b^2-c^2} \\mp bc} \\end{aligned}$$\n$$\\begin{aligned} x_i \u0026= x_1 \\mp \\frac{S_t r_1}{\\sqrt{S_t^2+1}} \u0026 y_i \u0026= \\pm \\sqrt{r_1^2-(x_i-x_1)^2}+y_1 \\end{aligned}$$\n$$\\begin{aligned} y \u0026= S_t(x - x_i) + y_i \\end{aligned}$$\nNote that in each of the first three lines in the system of equations, there are one or more uses of the plus-or-minus or minus-or-plus operator. This means that there are $2^3=8$ possible linear functions that this system could generate, depending on which option (plus or minus) one chooses for each line in the system. Only four of these functions, however, will represent actual tangents, internal or external, to the circles.\nlimitations of the model As previously noted, the biggest limitation in this model is that it’s ambiguous: only half of the lines it produces are real tangent lines, so someone using the model would need to manually choose which set to use. There are some situations in which the model breaks – for example, when one or more of the tangent lines would be vertical, the model produces an undefined slope.\nThe IB Diploma Programme Final Statistical Bulletin, May 2021 Assessment Session, page 8 ↩︎\n","wordCount":"3343","inLanguage":"en","datePublished":"2023-07-10T00:00:00Z","dateModified":"2023-07-10T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://roman.computer/tangents/"},"publisher":{"@type":"Organization","name":"Roman Hauksson","logo":{"@type":"ImageObject","url":"https://roman.computer/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://roman.computer/ accesskey=h title="Roman Hauksson (Alt + H)">Roman Hauksson</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)">
+<img src=/sun.png id=sun class=theme-toggle-icon>
+<img src=/moon.png id=moon class=theme-toggle-icon></button></div></div><ul id=menu><li><a class=link href=https://roman.computer/posts/ title=posts><span>posts</span></a></li><li><a class=link href=https://roman.computer/tags/ title=tags><span>tags</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://roman.computer/>Home</a>&nbsp;»&nbsp;<a href=https://roman.computer/posts/>Posts</a></div><h1 class=post-title>📐 graphing tangent lines to two circles</h1><div class=post-description>A system of equations for the lines tangent to two circles on the coordinate plane.</div><div class=post-meta><span title='2023-07-10 00:00:00 +0000 UTC'>2023 Jul 10</span>&nbsp;·&nbsp;16 min</div><ul class=post-tags></ul></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>table of contents</span></summary><div class=inner><nav id=TableOfContents><ul><li><a href=#context>context</a></li><li><a href=#introduction>introduction</a></li><li><a href=#external-tangent-lines>external tangent lines</a><ul><li><a href=#slopes-of-the-external-tangents>slopes of the external tangents</a></li><li><a href=#points-on-the-external-tangents>points on the external tangents</a></li><li><a href=#final-external-tangent-model>final external tangent model</a></li></ul></li><li><a href=#internal-tangent-lines>internal tangent lines</a></li><li><a href=#final-model>final model</a></li><li><a href=#limitations-of-the-model>limitations of the model</a></li></ul></nav></div></details></div><div class=post-content><h2 id=context>context<a hidden class=anchor aria-hidden=true href=#context>#</a></h2><p>In 2021 March, i had to write a paper called the &ldquo;Extended Essay&rdquo;, which was sort of the culminating work for the International Baccalaureate program at my high school. I was one of the 3.2% of candidates to write it under the &ldquo;Mathematics&rdquo; subject and one of 20% to earn an A for it!<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup> :D</p><p>Even though it&rsquo;s poorly written, i decided to throw it up here, with some of the cruft trimmed off. The conclusion is that tangent lines to circles can be modeled by the following system of equations.</p><p>$$
+\begin{aligned}
+a &= x_1-x_2 & b &= y_1-y_2 & c &= r_1 \pm r_2
+\end{aligned}
+$$</p><p>$$\begin{aligned}
+S_t = \frac{b \sqrt{a^2+b^2-c^2} \pm ac}{a \sqrt{a^2+b^2-c^2} \mp bc}
+\end{aligned}$$</p><p>$$\begin{aligned}
+x_i &= x_1 \mp \frac{S_t r_1}{\sqrt{S_t^2+1}} & y_i &= \pm \sqrt{r_1^2-(x_i-x_1)^2}+y_1
+\end{aligned}$$</p><p>$$\begin{aligned}
+y &= S_t(x - x_i) + y_i
+\end{aligned}$$</p><p>Substitute $(x_1, y_1)$ with the coordinates of the first circle and $r_1$ with its radius. Likewise, substitute $x_2$, $y_2$, and $r_2$ for the second circle.</p><p>Use different states of the three plus–minus signs to generate eight different possible lines, and manually choose four from those eight as your four tangent lines (two internal and two external).</p><h2 id=introduction>introduction<a hidden class=anchor aria-hidden=true href=#introduction>#</a></h2><p>A couple years ago, i sometimes liked to make art in Desmos (an online
+graphing calculator), and one of my almost-finished pieces was a bicycle. I
+had written the equation for each line that made up the drawing of the
+bike, and i could even adjust the seat height and pedal lengths with
+variable sliders.</p><p>However, one feature of the bike was notably missing: the chain connecting the gears. This would have taken the form of lines tangent to the two circles representing the gears, but i didn&rsquo;t know how to graph that precisely at the time.</p><figure id=fig:bike><img src=/bike.jpeg alt=image><figcaption>① a bicycle chain, resembling circles with tangent lines</figcaption></figure><p>I&rsquo;ve since lost the original Desmos project, but my unsolved problem has tormented me ever since. How do you write the linear equation for each of the lines that are tangent to two circles if you know the radii and coordinates of those circles?</p><h2 id=external-tangent-lines>external tangent lines<a hidden class=anchor aria-hidden=true href=#external-tangent-lines>#</a></h2><p>There are two circles:</p><ul><li>Circle 1 with center $C_1=(x_1,y_1)$ and radius $r_1$</li><li>Circle 2 with center $C_2=(x_2,y_2)$ and radius $r_2$</li><li>$r_1\geq r_2$</li></ul><figure id=fig:exTans><img src=/circleTangents1.png alt=image><figcaption>② external tangents of two circles</figcaption></figure><p>A line is drawn between the centers of the circles, called $C(x)$, and
+both external tangent lines $t_1(x)$ and $t_2(x)$ are drawn. The points
+of intersection between the tangent lines and circle 1 are
+$i_1=(x_{i1},y_{i1})$ and $i_2=(x_{i2},y_{i2})$. The points of
+intersection on circle 2 are $i_3=(x_{i3},y_{i3})$ and
+$i_4=(x_{i4},y_{i4})$. All three lines intersect at point $P$. The angle
+between the first tangent line and the line that connects the centers of
+the circles is $\angle C_1Pi_1$.</p><h3 id=slopes-of-the-external-tangents>slopes of the external tangents<a hidden class=anchor aria-hidden=true href=#slopes-of-the-external-tangents>#</a></h3><p>Angle $\angle C_1 i_1 P$ is a right angle because it is the angle
+between a tangent to a circle and a radius that passes through the point
+of tangency, and the same is true for $\angle C_2 i_3 P$⁠. Because these right angles are congruent, and because
+$\triangle C_1 P i_1$ and $\triangle C_2 P i_2$ share the angle
+$\angle C_1 P i_1$, this makes the triangles similar.</p><p>Because these triangles are similar, the ratio between corresponding
+sides is constant. Therefore,</p><p>$$\frac{r_1}{r_2} = \frac{h_1}{h_2}$$</p><p>We
+can substitute $h_1$ with the two lengths that make it up: $h_2+d$.
+Then, by rewriting the equation, we can solve for $h_2$.</p><p>$$
+\begin{aligned}
+\frac{r_1}{r_2} &= \frac{h_2+d}{h_2} \\
+r_1h_2 &= r_2(h_2+d) \\
+r_1h_2 &= r_2h_2+r_2d \\
+r_1h_2 &= r_2h_2+r_2d \\
+r_1h_2-r_2h_2 &= r_2d \\
+h_2(r_1-r_2) &= r_2d \\
+h_2 &= \frac{r_2d}{r_1-r_2}
+\end{aligned}
+$$</p><p>Now that $h_2$ is defined, we can use trigonometry to
+define the angle between the line that connects the circles&rsquo; centers and
+the first tangent line. This angle is $\angle C_2 P i_3$, or $\theta$.</p><p>Consider triangle $\triangle C_2 i_3 P$:</p><figure><img src=/thetaTriangle.png><figcaption>③ triangle <span class="math inline">△<em>C</em><sub>2</sub><em>i</em><sub>3</sub><em>P</em></span></figcaption></figure><p>Because of the definition of the sine of an angle (the ratio between the
+opposing side and the hypotenuse in a right triangle),
+$\sin{\theta} =\frac{r_2}{h_2}$. By taking the inverse sine of each
+side, we can define $\theta$:
+$$\theta =\arcsin{\left(\frac{r_2}{h_2}\right)}$$ To find the angle of
+the first external tangent line, we can add $\theta$ to the angle of
+$C(x)$ with respect to the $x$-axis. Similarly, we can subtract $\theta$
+from the angle of $C(x)$ to find the angle of the second tangent line.
+$$\begin{aligned}
+\theta_t=\theta_C \pm \theta
+\end{aligned}$$</p><figure id=fig:plusMinusTheta><p><img src=/plusMinusTheta.png alt=image> <span id=fig:plusMinusTheta label=fig:plusMinusTheta></span></p><figcaption>④ angles of external tangents and <span class="math inline"><em>C</em>(<em>x</em>)</span></figcaption></figure><p>But how do we know the angle of $C(x)$? The slope of $C(x)$ can be found
+by using the slope formula and substituting with the coordinates of the
+centers of the circles. Then, we can convert this slope into an angle by
+finding its inverse tangent.</p><p>$$\begin{aligned}
+\theta_C &= \arctan{\left( S_C \right)} \\
+\theta_C &= \arctan{\left( \frac{\Delta y}{\Delta x} \right)} \\
+\theta_C &= \arctan{\left( \frac{y_1-y_2}{x_1-x_2} \right)}
+\end{aligned}
+$$</p><p>Now, we can substitute the values of $\theta_C$ and
+$\theta$:
+$$
+\begin{aligned}
+\theta_t &= \theta_C \pm \theta \\
+\theta_C &= \arctan{\left( \frac{y_1-y_2}{x_1-x_2} \right)} \\
+\theta &= \arcsin{\left( \frac{r_2}{h_2} \right)} \\
+\theta_t &= \arctan{\left( \frac{y_1-y_2}{x_1-x_2} \right)} \pm \arcsin{\left( \frac{r_2}{h_2} \right)}
+\end{aligned}
+$$</p><p>Then, we can substitute for $h_2$ and simplify:</p><p>$$
+\begin{aligned}
+h_2 &= \frac{r_2d}{r_1-r_2} \\
+\theta_t &= \arctan{\left(\frac{y_1-y_2}{x_1-x_2}\right)} \pm \arcsin{\left(\frac{r_2}{\frac{r_2d}{r_1 - r_2}}\right)} \\
+\theta_t &= \arctan{\left(\frac{y_1-y_2}{x_1-x_2}\right)} \pm \arcsin{\left(\frac{r_2(r_1 - r_2)}{r_2d}\right)} \\
+\theta_t &= \arctan{\left(\frac{y_1-y_2}{x_1-x_2}\right)} \pm \arcsin{\left(\frac{r_1 - r_2}{d}\right)}
+\end{aligned}
+$$</p><p>We can then substitute for $d$. $d$ is the distance
+between the centers of the circles, so we can use the distance formula
+with $C_1$ and $C_2$ as points.</p><p>$$
+\begin{aligned}
+d &= \sqrt{(x_1-x_2)^2+(y_1-y_2)^2} \\
+\theta_t &= \arctan{\left( \frac{y_1-y_2}{x_1-x_2} \right)} \pm \arcsin{\left(\frac{r_1 - r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\right)}
+\end{aligned}
+$$</p><p>Because the tangent of the angle of a line produces its
+slope, we can take the tangent of both sides to generate an equation for
+both of the slopes of the external tangent lines:
+$$S_t = \tan{\left(\arctan{\left(\frac{y_1-y_2}{x_1-x_2}\right)} \pm \arcsin{\left(\frac{r_1 - r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\right)}\right)}$$
+This equation, which uses trigonometric functions inside of a
+trigonometric function, is not very elegant. To rewrite it, we can use a
+trigonometric identity for the tangent of a sum or difference:</p><p>$$\tan{(\alpha \pm \beta)}=\frac{\tan{(\alpha)} \pm \tan{(\beta)}}{1 \mp \tan{(\alpha)}\tan{(\beta)}}$$</p><p>In this case, $\alpha = \arctan{\left(\frac{y_1-y_2}{x_1-x_2}\right)}$
+and
+$\beta = \arcsin{\left(\frac{r_1 - r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\right)}$.</p><p>For ease of explanation, we&rsquo;ll first find $\tan{(\alpha)}$ and
+$\tan{(\beta)}$ separately, then substitute them into the identity.</p><p>The tangent of $\alpha$ is simple to find, because the arctangent and
+the tangent functions cancel each other out:</p><p>$$\begin{aligned}
+\tan{(\alpha)} &= \tan{\left( \arctan{\left(\frac{y_1-y_2}{x_1-x_2}\right)} \right)} \\
+\tan{(\alpha)} &= \frac{y_1-y_2}{x_1-x_2}
+\end{aligned}$$</p><p>However, the tangent of $\beta$ is trickier because the
+tangent function doesn&rsquo;t cancel out the arcsine function. To remedy
+this, we can use an identity for the tangent of an arcsine, as
+demonstrated by figure <a href=#fig:tanArcsin>5</a>.</p><figure id=fig:tanArcsin><p><img src=/tanArcsin.png style=width:40%;background-color:#fff;padding:.5rem alt=image> <span id=fig:tanArcsin label=fig:tanArcsin></span></p><figcaption>⑤ right triangle demonstration of <span class="math inline">tan (arcsin(<em>x</em>))</span> <span class=citation data-cites=tanArcsin></span></figcaption></figure><p>In figure <a href=#fig:tanArcsin>5</a>, the sine of angle $\theta$ is the ratio
+between the lengths of the opposite side and the hypotenuse, or
+$\frac{x}{1}=x$. Therefore, the arcsine of this ratio equals $\theta$:
+$$\arcsin{(x)}=\theta$$ The tangent of $\theta$, or in other words, the
+tangent of $\arcsin{(x)}$, is equal to the ratio between the opposite
+side and the adjacent side. The length of the adjacent side can be found
+using the Pythagorean theorem: $\sqrt{1-x^2}$. Therefore,
+$$\tan{\left(\arcsin{(x)}\right)}=\frac{x}{\sqrt{1-x^2}}$$ We can now
+use this identity to find $\tan{(\beta)}$:
+$$
+\begin{aligned}
+\tan{(\beta)} &= \tan{\left(\arcsin{\left(\frac{r_1 - r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\right)}\right)} \\
+\tan{(\beta)} &= \frac{\frac{r_1 - r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}}{\sqrt{1-\left(\frac{r_1 - r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\right)^2}} \\
+\tan{(\beta)} &= \frac{\frac{r_1 - r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}}{\sqrt{1-\frac{(r_1 - r_2)^2}{(x_1-x_2)^2+(y_1-y_2)^2}}} \\
+\tan{(\beta)} &= \frac{\frac{r_1 - r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}}{\sqrt{\frac{(x_1-x_2)^2+(y_1-y_2)^2}{(x_1-x_2)^2+(y_1-y_2)^2}-\frac{(r_1 - r_2)^2}{(x_1-x_2)^2+(y_1-y_2)^2}}} \\
+\tan{(\beta)} &= \frac{\frac{r_1 - r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}}{\sqrt{\frac{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}{(x_1-x_2)^2+(y_1-y_2)^2}}} \\
+\tan{(\beta)} &= \frac{\frac{r_1 - r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}}{\frac{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}} \\
+\tan{(\beta)} &= \frac{r_1 - r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}
+\end{aligned}
+$$
+Now that we know $\tan{(\alpha)}$ and $\tan{(\beta)}$,
+we can return to rewriting the slope equation using the identity for the
+tangent of a sum or difference.</p><p>$$
+\begin{aligned}
+S_t &= \tan{\left(\arctan{\left(\frac{y_1-y_2}{x_1-x_2}\right)} \pm \arcsin{\left(\frac{r_1 - r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\right)}\right)} \\
+\tan{(\alpha \pm \beta)} &= \frac{\tan{(\alpha)} \pm \tan{(\beta)}}{1 \mp \tan{(\alpha)}\tan{(\beta)}} \\
+S_t &= \frac{\frac{y_1-y_2}{x_1-x_2} \pm \frac{r_1 - r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}}{1 \mp \frac{y_1-y_2}{x_1-x_2} \cdot \frac{r_1 - r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}} \\
+S_t &= \frac{\frac{y_1-y_2}{x_1-x_2} \pm \frac{r_1 - r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}}{1 \mp \frac{(y_1-y_2)(r_1 - r_2)}{(x_1-x_2)\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}}
+\end{aligned}
+$$</p><p>We can rewrite each term with a common denominator.
+$$\begin{aligned}
+S_t &= \frac{\frac{(y_1-y_2)\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}{(x_1-x_2)\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}} \pm \frac{(x_1-x_2)(r_1 - r_2)}{(x_1-x_2)\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}}{\frac{(x_1-x_2)\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}{(x_1-x_2)\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}} \mp
+\frac{(y_1-y_2)(r_1 - r_2)}{(x_1-x_2)\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2}}}
+\end{aligned}$$ Finally, multiplying each side by the common denominator
+yields the final equation for the slopes of the external tangent lines:
+$$S_t = \frac{(y_1-y_2)\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2} \pm (x_1-x_2)(r_1 - r_2)}{(x_1-x_2)\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2} \mp (y_1-y_2)(r_1 - r_2)}$$
+At first glance, this equation doesn&rsquo;t appear any simpler than the one
+involving nested trigonometric functions. However, by applying the
+following substitutions, the symmetry and elegance of this equation
+becomes clear: $$\begin{gathered}
+a = x_1-x_2 \qquad b = y_1-y_2 \qquad c = r_1-r_2 \\
+S_t = \frac{b \sqrt{a^2+b^2-c^2} \pm ac}{a \sqrt{a^2+b^2-c^2} \mp bc}
+\end{gathered}$$</p><h3 id=points-on-the-external-tangents>points on the external tangents<a hidden class=anchor aria-hidden=true href=#points-on-the-external-tangents>#</a></h3><p>In order to define an exact equation for the external tangents, defining
+the slopes isn&rsquo;t enough. We also need a point on each of the slopes, and
+the easiest points to use are the points of tangency on circle 1.</p><p>A point of tangency on circle 1 will have an instantaneous slope equal
+to that of the tangent line it corresponds to. Therefore, to figure out
+which points on circle 1 can qualify as points of tangency, we need to
+find the derivative (the slope at each point) of the equation of circle
+1 and set it equal to the tangent&rsquo;s slope, and then solve for the
+x-value of the point of tangency. This can then be fed back into the
+circle equation to define the other coordinate of the point of tangency,
+which would complete the definition of the tangent line function.</p><p>This method presents one key problem, however: a circle equation is not
+a function, and so its derivative would not be a function either. At
+each x-value in the domain of the graph of the circle, there are two
+possible y-values and two possible slopes, and as a result, there are
+two points on circle 1 that could qualify as points of tangency for each
+tangent line. Because there are two tangent lines, this makes four
+possible points of tangency, but only two of them are correct.</p><figure id=fig:twoTanPoints><p><img src=/twoTanPoints.png alt=image> <span id=fig:twoTanPoints label=fig:twoTanPoints></span></p><figcaption>⑥ two points of tangency on a circle that have the same
+instantaneous slope</figcaption></figure><p>Ultimately, i decided to accept the fact that this approach would
+generate not two, but four possible external tangents, and someone using
+this equation would have to manually decide which definitions to use.</p><p>The first step is to find the derivative of the circle equation.
+However, this equation is not defined simply in terms of $y$, as it&rsquo;s
+based on the Pythagorean theorem. $$(x-x_1)^2+(y-y_1)^2=r_1^2$$ Implicit
+differentiation would not work in this case, so we need to rewrite the
+circle equation in terms of $y$ before we differentiate it with respect
+to $x$. $$\begin{aligned}
+(x-x_1)^2+(y-y_1)^2 &= r_1^2 \\
+(y-y_1)^2 &= r_1^2-(x-x_1)^2 \\
+y-y_1 &= \pm \sqrt{r_1^2-(x-x_1)^2} \\
+y &= \pm \sqrt{r_1^2-(x-x_1)^2}+y_1
+\end{aligned}$$ Now, we can find the derivative of this equation to find
+the slope of any given point on circle 1.</p><p>$$\begin{aligned}
+\frac{\mathrm{d}}{\mathrm{d}x} [y] &= \frac{\mathrm{d}}{\mathrm{d}x} \left[ \pm \sqrt{r_1^2-(x-x_1)^2}+y_1 \right] \\
+\frac{\mathrm{d}y}{\mathrm{d}x} &= \pm \frac{\mathrm{d}}{\mathrm{d}x} \left[ \sqrt{r_1^2-(x-x_1)^2} \right] \\
+\frac{\mathrm{d}y}{\mathrm{d}x} &= \pm \frac{\mathrm{d}}{\mathrm{d}x} \left[ \left( r_1^2-(x-x_1)^2 \right)^{\frac{1}{2}} \right]
+\end{aligned}$$</p><p>We can use the chain rule for derivatives to continue.
+$$\begin{aligned}
+\frac{\mathrm{d}y}{\mathrm{d}x} &= \pm \frac{1}{2} \left( r_1^2-(x-x_1)^2 \right)^{-\frac{1}{2}} \left( \frac{\mathrm{d}}{\mathrm{d}x} \left[ r_1^2-(x-x_1)^2 \right] \right) \\
+\frac{\mathrm{d}y}{\mathrm{d}x} &= \pm \frac{1}{2 \sqrt{r_1^2-(x-x_1)^2}} \left( -\frac{\mathrm{d}}{\mathrm{d}x} \left[ (x-x_1)^2 \right] \right) \\
+\frac{\mathrm{d}y}{\mathrm{d}x} &= \pm \frac{1}{2 \sqrt{r_1^2-(x-x_1)^2}} \left( 2(x-x_1)(1) \right) \\
+\frac{\mathrm{d}y}{\mathrm{d}x} &= \pm \frac{2(x-x_1)}{2 \sqrt{r_1^2-(x-x_1)^2}} \\
+\frac{\mathrm{d}y}{\mathrm{d}x} &= \pm \frac{x-x_1}{\sqrt{r_1^2-(x-x_1)^2}}
+\end{aligned}$$ This resulting equation gives the relationship between
+the slope of the tangent line ($\frac{\mathrm{d}y}{\mathrm{d}x}$) and
+the $x$-coordinate of the point of tangency on circle 1.</p><p>We need to rewrite this equation in terms of $x$, because in this case,
+$x$ is the $x$-coordinate of the point of tangency, which will be used
+in the tangent line equation. However, the algebra that enables us to do
+this is long and confusing. To help make the process easier to read, we
+will temporarily reassign each variable to a single letter each:
+$$\begin{aligned}
+\frac{\mathrm{d}y}{\mathrm{d}x} = S_t &= a \\
+r_1 &= b \\
+x = x_i &= c \\
+x_1 &= d
+\end{aligned}$$ Essentially, we can rewrite the equation as a sum of
+terms, which can be rearranged into a quadratic equation with multi-term
+coefficients. These can be plugged into the quadratic formula in order
+to solve for $c$, which represents $x_i$. $$\begin{aligned}
+a &= \pm \frac{c-d}{\sqrt{b^2-(c-d)^2}} \\
+\pm a \sqrt{b^2-(c-d)^2} &= c-d \\
+\left( \pm a \sqrt{b^2-(c-d)^2} \right)^2 &= (c-d)^2 \\
+a^2(b^2-(c-d)^2) &= (c-d)^2 \\
+a^2(b^2-(c^2-2cd+d^2)) &= c^2 - 2cd +d^2 \\
+a^2(b^2-c^2+2cd-d^2) &= c^2 - 2cd +d^2 \\
+a^2b^2-a^2c^2+2a^2cd-a^2d^2 &= c^2 - 2cd +d^2 \\
+a^2b^2 - a^2c^2 + 2a^2cd - a^2d^2 - c^2 + 2cd - d^2 &= 0 \\
+- a^2c^2 - c^2 + 2a^2cd + 2cd + a^2b^2 - a^2d^2 - d^2 &= 0 \\
+c^2(- a^2 - 1) + c(2a^2d + 2d) + (a^2b^2 - a^2d^2 - d^2) &= 0
+\end{aligned}$$ Now that the equation is in the form of a quadratic, we
+can use the quadratic formula to determine the solutions for $c$.
+$$c = \frac{-(2a^2d+2d) \pm \sqrt{(2a^2d+2d)^2-4(-a^2-1)(a^2b^2 - a^2d^2 - d^2)}}{2(-a^2-1)}$$
+For readability, we&rsquo;ll simplify the radicand in the quadratic formula
+separately: $$\begin{gathered}
+(2a^2d+2d)^2-4(-a^2-1)(a^2b^2 - a^2d^2 - d^2) \\
+4a^4d^2 + 8a^2d^2 + 4d^2 - 4(-a^4b^2 + a^4d^2 +a^2d^2 -a^2b^2 +a^2d^2 +d^2) \\
+4a^4d^2 + 8a^2d^2 + 4d^2 + 4a^4b^2 - 4a^4d^2 - 4a^2d^2 + 4a^2b^2 - 4a^2d^2 - 4d^2 \\
+(4a^4d^2 - 4a^4d^2) + (8a^2d^2 - 4a^2d^2 - 4a^2d^2) + (4d^2 - 4d^2) + 4a^4b^2 + 4a^2b^2 \\
+4a^4b^2 + 4a^2b^2
+\end{gathered}$$ Then, we can substitute the radicand back into the
+quadratic formula and continue simplifying. $$\begin{aligned}
+c &= \frac{-(2a^2d+2d) \pm \sqrt{4a^4b^2 + 4a^2b^2}}{2(-a^2-1)} \\
+c &= \frac{-2d(a^2+1) \pm \sqrt{4a^4b^2 + 4a^2b^2}}{-2(a^2+1)} \\
+c &= \frac{-2d(a^2+1) \pm 2ab\sqrt{a^2+1}}{-2(a^2+1)} \\
+c &= \frac{d(a^2+1) \mp ab \sqrt{a^2+1}}{a^2+1} \\
+c &= \frac{d(a^2+1)}{a^2+1} \mp \frac{ab \sqrt{a^2+1}}{a^2+1} \\
+c &= d \mp \frac{ab \sqrt{a^2+1}}{a^2+1} \\
+c &= d \mp \frac{ab (a^2+1)^{\frac{1}{2}}}{(a^2+1)^1} \\
+c &= d \mp ab(a^2+1)^{-\frac{1}{2}} \\
+c &= d \mp ab \cdot \frac{1}{(a^2+1)^{\frac{1}{2}}} \\
+c &= d \mp \frac{ab}{\sqrt{a^2+1}}
+\end{aligned}$$ We can now reverse the temporary substitutions to give
+us a definition of the $x$-coordinate of the point of tangency on
+circle 1. $$\begin{gathered}
+a = S_t \qquad b = r_1 \qquad c = x_i \qquad d = x_1 \\
+x_i = x_1 \mp \frac{S_t r_1}{\sqrt{S_t^2+1}}
+\end{gathered}$$ This equation is in terms of the slope of the tangent
+line, the $x$-coordinate of the center of circle 1, and the radius of
+circle 1. However, it&rsquo;s important to note that the tangent&rsquo;s slope is
+itself defined by other given values in the problem. Earlier, we
+manipulated the circle equation so that it was in terms of $y$, which
+allowed us to find its derivative with respect to $x$. We can substitute
+our definition of the $x$-coordinate of the point of tangency into this
+circle equation, allowing us to define the corresponding $y$-coordinate.
+$$y_i = \pm \sqrt{r_1^2-(x_i-x_1)^2}+y_1$$</p><h3 id=final-external-tangent-model>final external tangent model<a hidden class=anchor aria-hidden=true href=#final-external-tangent-model>#</a></h3><p>The slopes of the tangent lines, the $x$-coordinates of the points of
+tangency, and the $y$-coordinates of the points of tangency have all
+been defined in terms of the original parameters of the problem. By
+using the point-slope equation $f(x) = m (x - x_1) + y_1$, the final
+system of equations can be displayed: $$\begin{aligned}
+S_t &= \frac{(y_1-y_2)\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2} \pm (x_1-x_2)(r_1 - r_2)}{(x_1-x_2)\sqrt{(x_1-x_2)^2+(y_1-y_2)^2-(r_1 - r_2)^2} \mp (y_1-y_2)(r_1 - r_2)} \\
+x_i &= x_1 \mp \frac{S_t r_1}{\sqrt{S_t^2+1}} \\
+y_i &= \pm \sqrt{r_1^2-(x_i-x_1)^2}+y_1 \\
+y &= S_t(x - x_i) + y_i
+\end{aligned}$$ Unfortunately, because of the ambiguity of the
+plus-or-minus operators in the system of equations, two of the possible
+equations generated are not correct, and so the correct equations must
+be chosen manually.</p><figure id=fig:fourExTans><p><img src=/fourExTans.png alt=image> <span id=fig:fourExTans label=fig:fourExTans></span></p><figcaption>⑦ four lines generated by the external tangent
+system</figcaption></figure><h2 id=internal-tangent-lines>internal tangent lines<a hidden class=anchor aria-hidden=true href=#internal-tangent-lines>#</a></h2><figure id=fig:internalTans><p><img src=/internalTans.png alt=image> <span id=fig:internalTans label=fig:internalTans></span></p><figcaption>⑧ internal tangents of two circles</figcaption></figure><p>The process for modelling the internal tangents to two circles is very
+similar to the process for external tangents. In figure
+<a href=#fig:exTans>2</a>, two
+similar triangles were used to write a ratio involving the radii and the
+hypotenuses. In figure <a href=#fig:internalTans>8</a>, triangles $\triangle C_1 P i_1$ and
+$\triangle C_2 P i_3$ are similar because they share the vertical angle
+$\theta$, and they both have a right angle. This allows us to equate the
+following ratios between corresponding sides:
+$$\frac{r_2}{r_1}=\frac{h_2}{h_1}$$ We can rewrite $h_2$ as $d-h_1$ and
+then solve for $h_1$: $$\begin{aligned}
+\frac{r_2}{r_1} &= \frac{d-h_1}{h_1} \\
+\frac{h_1r_2}{r_1} &= d-h_1\\
+h_1r_2 &= r_1d-r_1h_1\\
+h_1r_2 +r_1h_1&= r_1d\\
+h_1(r_2 +r_1) &= r_1d\\
+h_1 &= \frac{r_1d}{r_2 +r_1}
+\end{aligned}$$ This definition of $h_1$ allows us to find $\theta$
+using trigonometry. We can express the sine of $\theta$ as the ratio
+between the opposite side in the right triangle and the hypotenuse:
+$$\sin{(\theta)=\frac{r_1}{h_1}}$$ Then, we can substitute for $h_1$ and
+solve for $\theta$. $$\begin{aligned}
+\sin{(\theta)}&=\frac{r_1}{ \frac{r_1d}{r_2 +r_1}} \\
+\sin{(\theta)}&=\frac{r_1(r_2 +r_1)}{r_1d} \\
+\sin{(\theta)}&=\frac{r_2 +r_1}{d} \\
+\theta&=\arcsin{\left(\frac{r_2 +r_1}{d}\right)}
+\end{aligned}$$ Just like the external tangents, the angle of the
+internal tangents is simply the angle of $C(x)$, plus or minus the angle
+$\theta$ (see figure <a href=#fig:plusMinusTheta>4</a>{reference-type=&ldquo;ref&rdquo;
+reference=&ldquo;fig:plusMinusTheta&rdquo;}). Because we already found the angle of
+$C(x)$ (called $\theta_C$) when we modeled the external tangents, we can
+use a similar formula as before: $$\begin{aligned}
+\theta_t &= \theta_C \pm \theta \\
+\theta_C &= \arctan{\left( \frac{y_1-y_2}{x_1-x_2} \right)} \\
+\theta_t &= \arctan{\left( \frac{y_1-y_2}{x_1-x_2} \right)} \pm \arcsin{\left(\frac{r_2 +r_1}{d}\right)}
+\end{aligned}$$ Then, because the tangent of the angle of a line equals
+the slope of the line, we can take the tangent of each side to find the
+slope of the internal tangent lines.
+$$S_t = \tan{\left(\arctan{\left( \frac{y_1-y_2}{x_1-x_2} \right)} \pm \arcsin{\left(\frac{r_2 +r_1}{d}\right)}\right)}$$
+Finally, we can substitute $d$ with the formula for the distance between
+$C_1$ and $C_2$.
+$$S_t = \tan{\left(\arctan{\left(\frac{y_1-y_2}{x_1-x_2}\right)} \pm \arcsin{\left(\frac{r_1 + r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\right)}\right)}$$
+This is very similar to the formula for the slope of the external
+tangent lines. In fact, the sole difference between the formulas is that
+the external tangent equation uses the difference between the circles'
+radii, while the internal tangent equation uses the sum of the radii.
+$$\begin{aligned}
+S_{\text{outer tangents}} &= \tan{\left(\arctan{\left(\frac{y_1-y_2}{x_1-x_2}\right)} \pm \arcsin{\left(\frac{r_1 - r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\right)}\right)} \\
+S_{\text{inner tangents}} &= \tan{\left(\arctan{\left(\frac{y_1-y_2}{x_1-x_2}\right)} \pm \arcsin{\left(\frac{r_1 + r_2}{\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}}\right)}\right)}
+\end{aligned}$$ Conveniently, this difference is consistent throughout
+the rest of the problem. At no point during the problem-solving process
+involving the external tangents was the term $r_1-r_2$ separated or
+modified, which means that all we need to do to adapt our model to use
+for the internal tangents is to replace $r_1-r_2$ with $r_1+r_2$. Or, to
+represent both set of tangents in the same system of equations, we can
+use $r_1 \pm r_2$.</p><h2 id=final-model>final model<a hidden class=anchor aria-hidden=true href=#final-model>#</a></h2><p>If we rearrange the previous system of equations for external tangent
+lines, as well as replace $r_1-r_2$ with $r_1 \pm r_2$, the updated
+system of equations can be displayed. We can mathematically model
+tangent lines to two circles on the coordinate plane using the following
+system of equations:</p><p>$$
+\begin{aligned}
+a &= x_1-x_2 & b &= y_1-y_2 & c &= r_1 \pm r_2
+\end{aligned}
+$$</p><p>$$\begin{aligned}
+S_t = \frac{b \sqrt{a^2+b^2-c^2} \pm ac}{a \sqrt{a^2+b^2-c^2} \mp bc}
+\end{aligned}$$</p><p>$$\begin{aligned}
+x_i &= x_1 \mp \frac{S_t r_1}{\sqrt{S_t^2+1}} & y_i &= \pm \sqrt{r_1^2-(x_i-x_1)^2}+y_1
+\end{aligned}$$</p><p>$$\begin{aligned}
+y &= S_t(x - x_i) + y_i
+\end{aligned}$$</p><p>Note that in each of the first three lines in the system
+of equations, there are one or more uses of the plus-or-minus or
+minus-or-plus operator. This means that there are $2^3=8$ possible
+linear functions that this system could generate, depending on which
+option (plus or minus) one chooses for each line in the system. Only
+four of these functions, however, will represent actual tangents,
+internal or external, to the circles.</p><h2 id=limitations-of-the-model>limitations of the model<a hidden class=anchor aria-hidden=true href=#limitations-of-the-model>#</a></h2><p>As previously noted, the biggest limitation in this model is that it&rsquo;s
+ambiguous: only half of the lines it produces are real tangent lines, so
+someone using the model would need to manually choose which set to use. There are some situations in
+which the model breaks &ndash; for example, when one or more of the tangent
+lines would be vertical, the model produces an undefined slope.</p><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p><a href=https://www.ibo.org/globalassets/new-structure/programmes/dp/pdfs/diploma-programme-final-statistical-bulletin-may-2021-assessment-session..pdf>The IB Diploma Programme Final Statistical Bulletin, May 2021 Assessment Session</a>, page 8&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div><footer class=post-footer><nav class=paginav><a class=next href=https://roman.computer/password_security/><span class=title>Next »</span><br><span>🔑 a talk about password security</span></a></nav></footer></article></main><footer class=footer><span><a href=https://creativecommons.org/licenses/by-sa/4.0/>(ɔ) CC BY-SA</a> •
+<a href=https://github.com/RomanHauksson/blog>source code</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML='<img src="/copy.png"/>';function s(){t.innerHTML='<img src="/copied.png"/>',setTimeout(()=>{t.innerHTML='<img src="/copy.png"/>'},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
