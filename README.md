@@ -4,6 +4,8 @@ This used to be my personal homepage and blog, built using the static site gener
 
 You can visit the archived site at [hugo.roman.computer](https://hugo.roman.computer).
 
+https://github.com/RomanHauksson/old-hugo-blog/assets/62364808/123c5e88-87a4-4283-bfeb-30db6e94808d
+
 ## modifications
 
 - Buttons are in the style of claymorphism and rotate when you hover over them
