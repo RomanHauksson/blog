@@ -1,5 +1,5 @@
 ---
-title: "avoid large group discussions in your social events"
+title: "💬 avoid large group discussions in your social events"
 date: 2023-02-17
 # weight: 1
 # aliases: ["/first"]

@@ -1,9 +1,9 @@
 ---
-title: "local regulation of artificial intelligence in the US"
+title: "⚖️ local regulation of artificial intelligence in the US"
 date: 2023-06-26
 # weight: 1
 # aliases: ["/first"]
-tags: ["technology"]
+tags: ["🤖 artificial intelligence"]
 # author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true
@@ -11,7 +11,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "This is a paper i wrote for my Government course; it's about current and imminent risks from AI and how local regulators should deal with them. It's not as epistemically rigourous or entertaining as i'd normally shoot for for a blog post, but i figured i'd post it here anyway."
+description: "An overview of the issues about the progress of artificial intelligence that are relevant to local regulators."
 canonicalURL: "https://roman.computer/local_AI_regulation"
 disableHLJS: true # to disable highlightjs
 disableShare: true
@@ -36,10 +36,13 @@ UseHugoToc: true
 #     appendFilePath: true # to append file path to Edit link
 ---
 
-The field of artificial intelligence (AI) has seen rapid advancements in recent years, forcing citizens and regulators alike to ponder what new rules should be implemented to ensure that the technology brings as much benefit to society, and as little harm, as possible. This report will provide an overview of how different state governments in the US are regulating AI, as well as the technical details necessary to understand the issues this rapidly evolving technology might cause.
+## context
 
+This is a paper i wrote for my Government course; it's about current and imminent issues about AI and how local regulators should deal with them. It's not as epistemically rigourous or entertaining as i'd normally shoot for for a blog post, but i figured i'd post it here anyway. It also doesn't cover the extreme issues i care more about: [existential risks from artificial superintelligent agents](https://80000hours.org/problem-profiles/artificial-intelligence/) and [the risk of astronomical amounts of suffering from conscious AI systems](https://80000hours.org/problem-profiles/artificial-sentience/).
 
 ## overview
+
+The field of artificial intelligence (AI) has seen rapid advancements in recent years, forcing citizens and regulators alike to ponder what new rules should be implemented to ensure that the technology brings as much benefit to society, and as little harm, as possible. This report will provide an overview of how different state governments in the US are regulating AI, as well as the technical details necessary to understand the issues this rapidly evolving technology might cause.
 
 Fundamentally, artificial intelligence refers to machines that possess the ability to reason, learn, and execute tasks that are typically performed by humans. In its early stages, these machines were manually programmed, and their creators focused on rule-based systems and expert knowledge. Over the years, the field has undergone two boom–bust cycles, with periods of rapid advancements followed by stagnation (“AI winters”). Today, it has transformed significantly with the advent of deep learning, a technique that involves iteratively updating the weights of a large neural network by exposing it to large amounts of data.
 

@@ -1,5 +1,11 @@
+.terms-tags {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
 .terms-tags li {
-    display: inline-block;
+    list-style-type: none;
     margin: 10px;
     font-weight: 500;
 }

@@ -1,9 +1,9 @@
 ---
-title: "tools for finding information on the internet"
+title: "🔍 tools for finding information on the internet"
 date: 2023-01-29
 # weight: 1
 # aliases: ["/first"]
-tags: ["technology"]
+tags: [""]
 # author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true
@@ -11,7 +11,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-# description: "Links to websites that help you navigate the cyberspace and overcome obstacles to truth."
+description: "Links to websites that help you navigate the cyberspace and overcome obstacles to truth."
 canonicalURL: "https://roman.computer/information"
 disableHLJS: true # to disable highlightjs
 disableShare: true
@@ -40,6 +40,20 @@ UseHugoToc: true
 #     appendFilePath: true # to append file path to Edit link
 ---
 
+## note
+
+Since i originally wrote this post, i stumbled across the subreddit [r/OSINT](https://www.reddit.com/r/OSINT) (open-source intelligence gathering). If you browse the [top posts of all time](https://www.reddit.com/r/OSINT/top/?t=all), you can find megalists of [hundreds of tools](https://www.reddit.com/r/OSINT/comments/12csg48/possibly_largest_osint_list/) to help you find information on the internet. There's also [an "awesome" list for OSINT tools](https://github.com/jivoi/awesome-osint) and [Michael Bazzel's *OSINT Techniques: Resources for Uncovering Online Information*](https://inteltechniques.com/book1.html).
+
+Needless to say, this post is a bit useless in comparison, at least until i go through these comprehensive lists and filter for the most useful resources.
+
+## presentation
+
+{{< youtube pV28lxB6-bk >}}
+
+<br>
+
+## introduction
+
 Isn't the internet such a magically useful tool? Thirty years ago, if you wanted to know how many plays Shakespeare wrote, you would have to physically walk to your local library and find a relevant book. Now, you can find [the answer](https://www.google.com/search?q=How+many+plays+did+Shakespeare+write%3F) in less than ten seconds, at any time, wherever you are.
 
 However, the internet is not a truthful, superintelligent oracle. Rather, it's a dangerous jungle of knowledge you must learn to navigate if you wish to find the truth. Good information is censored, hidden behind paywalls or within piles of spam, and difficult to differentiate from untrustworthy information. This post won't be a complete guide on how to navigate the world wide web of knowledge, but it will give you some tools I've discovered over the years that you can throw in your digital rucksack to aid your journey.
@@ -58,7 +72,6 @@ However, the internet is not a truthful, superintelligent oracle. Rather, it's a
 
 Sometimes you know exactly where to find a piece of information, but it's locked behind a paywall or deleted from the internet.
 
-- [Unddit](https://www.unddit.com/) displays deleted comments and posts on Reddit.
 - [Internet Archive](https://archive.org/) is a non-profit library of free books, movies, websites, et cetera. It's famous for the [Wayback Machine](https://web.archive.org/), which displays past archived snapshots of a given URL.
 - [Bypass Paywalls](https://github.com/iamadamdev/bypass-paywalls-chrome) is a browser extension to help bypass paywalls on selected sites.
 - The subreddit [r/piracy](https://www.reddit.com/r/Piracy/) has a [wiki](https://www.reddit.com/r/Piracy/wiki/index/) with loads of resources on obtaining copyrighted material for free.
